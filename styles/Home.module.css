@@ -6,3 +6,26 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.411);
   background-color: #ffffff;
 }
+
+.aside {
+  width: 25%;
+  background-color: #ffffff;
+  height: 100%;
+  padding-left: 7.5%;
+  background-color: #dedede;
+}
+
+.titulo {
+  margin: 0;
+  padding-top: 20px;
+}
+
+.price {
+  margin-bottom: 20px;
+}
+
+.catalogo {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #dedede;
+}
