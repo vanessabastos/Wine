@@ -29,3 +29,124 @@
   justify-content: flex-start;
   background-color: #dedede;
 }
+
+.produto {
+  background-color: #ffffff;
+  width: 256px;
+  height: 333px;
+  box-shadow: 0px 9.73384px 14.6008px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;;
+}
+
+.imagem {
+  position: absolute;
+  z-index: 1;
+}
+
+.desconto {
+  display: flex;
+  flex-direction: row;
+  margin-top: -20px;
+  margin-bottom: -20px;
+  padding: 0;
+  align-items: center;
+}
+
+.valorSemDesconto {
+  text-decoration-line: line-through ;
+  color: #888888;
+  padding-right: 5px;
+}
+
+.descontoOff {
+  background-color: #F79552;
+  color: #ffffff;
+  font-weight: 500;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border-radius: 3px;
+}
+
+.socio {
+  font-weight: 500;
+  margin-right: 6px;
+}
+
+.descontoSocio {
+  color: #B6116E;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.naoSocio {
+  color: #888888;
+}
+
+.botaoAdicionar {
+  width: 256px;
+  height: 39.36px;
+  background-color: #7EBC43;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  margin-top: -10px;
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.botaoAdicionar:active {
+  background: cadetblue;
+}
+
+.loading {
+  color: #555555;
+  margin-top: 200px;
+  margin-bottom: 250px;
+}
+
+.adega {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-right: 150px; 
+}
+
+.productDiv {
+  background-color: #ffffff;
+  width: 256px;
+  height: 333px;
+  display: flex;
+  align-items: center;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-bottom: 10%;
+  flex-direction: column;
+  box-shadow: 0px 9.73384px 14.6008px rgba(0, 0, 0, 0.1);
+}
+
+.productWine {
+  display: grid;
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-bottom: -20px;
+}
+
+.wineName {
+  display: flex;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  font-family:'Lucida Sans', Verdana, sans-serif;
+  text-align: center;
+}
+
+.sizePrice {
+  font-size: 1.5em;
+}
