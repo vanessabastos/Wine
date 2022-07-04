@@ -1,17 +1,7 @@
 import { HYDRATE } from 'next-redux-wrapper';
 import { USE_API } from '../action/actionTypes';
 
-interface API {
-  data: {
-    page: number,
-    totalPages: number,
-    itemsPerPage: number,
-    totalItems: number,
-    items: [],
-  },
-}
-
-const initialState: API = {
+const initialState = {
   data: {
     page: 0,
     totalPages: 0,
