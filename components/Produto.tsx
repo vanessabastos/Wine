@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { connect } from 'react-redux';
-import { useApiAction } from '../redux/action';
+import { UseApiAction } from '../redux/action';
 
 
 function Produto(props: any) {
@@ -95,7 +95,7 @@ const mapStateToProps = (state: any) => ({
 
 const mapDispatchToProps = (dispatch: any) => (
   {
-    apiResponse: (state: any) => dispatch(useApiAction(state)),
+    apiResponse: (state: any) => dispatch(UseApiAction(state)),
   }
 );
 
