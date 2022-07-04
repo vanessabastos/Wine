@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { connect } from 'react-redux';
-import { UseApiAction } from '../redux/action';
+import { UseApiAction, shoppingBagAction } from '../redux/action';
+import PageNumber from './Pagination';
 
 
 function Produto(props: any) {
-  const { apiResponse, UseApiResponse } = props;
-  const [actualPage, setActualPage] = useState(1);
+  const { apiResponse, UseApiResponse, productBag, shoppingCart } = props;
+  const [actualPage, usePageActual] = useState(1);
 
   useEffect(() => {
     const myApi = async () => {
@@ -22,6 +23,10 @@ function Produto(props: any) {
   }, [apiResponse, actualPage]);
 
   const { items, itemsPerPage, page, totalItems, totalPages } = UseApiResponse;
+
+  const addItem = (wine: any) => {
+    shoppingCart(wine)
+  }
 
   if(items === undefined) return (
     <h1 className={styles.loading}>
@@ -80,22 +85,27 @@ function Produto(props: any) {
           className={styles.botaoAdicionar}
           type="button" 
           value="ADICIONAR"
-          onClick={() => localStorage.setItem(item.name, JSON.stringify(item))}
+          onClick={ () => addItem(item) }
         />
       </div>
     ))}
     </main>
+    <PageNumber
+      usePageActual={ usePageActual }
+    />
   </section>
   )
 }
 
 const mapStateToProps = (state: any) => ({
   UseApiResponse: state.apiReducer.data,
+  productBag: state.shoppingBagReducer,
 });
 
 const mapDispatchToProps = (dispatch: any) => (
   {
     apiResponse: (state: any) => dispatch(UseApiAction(state)),
+    shoppingCart: (state: any) => dispatch(shoppingBagAction(state))
   }
 );
 
